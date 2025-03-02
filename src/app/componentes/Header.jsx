@@ -27,10 +27,11 @@ const Header = ({ allProducts, setAllProducts, total, setTotal, countProducts, s
     <header>
       <h1>Tienda de Tecnología Ruiz</h1>
 
-      {/* Ícono del carrito */}
-      <div className="cart-icon" onClick={() => setActive(!active)}>
-        🛒 <span className="cart-count">{countProducts}</span>
-      </div>
+      {typeof window !== "undefined" && (
+        <div className="cart-icon" onClick={() => setActive(!active)}>
+          🛒 <span className="cart-count">{countProducts}</span>
+          </div>
+        )}
 
       {/* MENÚ DESPLEGABLE DEL CARRITO */}
       <div className={`cart-dropdown ${active ? "active" : ""}`}>

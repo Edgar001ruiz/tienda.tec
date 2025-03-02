@@ -2,20 +2,21 @@
 import { data } from "@/app/data";
 
 export const ProductList = ({ allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal }) => {
+  
   const onAddProduct = (product) => {
     const existingProduct = allProducts.find((item) => item.id === product.id);
+  
     if (existingProduct) {
       const updatedProducts = allProducts.map((item) =>
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       );
       setAllProducts(updatedProducts);
     } else {
-      setAllProducts([...allProducts, product]);
+      setAllProducts([...allProducts, { ...product, quantity: 1 }]);
     }
     setTotal(total + product.price);
     setCountProducts(countProducts + 1);
   };
-
   return (
     <div className="container-items">
       {data.map((product) => (

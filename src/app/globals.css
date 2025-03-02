@@ -6,7 +6,6 @@ body {
   padding: 0;
 }
 
-/* Encabezado */
 .header {
   display: flex;
   justify-content: space-between;
@@ -52,7 +51,6 @@ body {
   margin: 0 auto;
 }
 
-/* Tarjeta de producto */
 .item {
   display: flex;
   flex-direction: column;
@@ -72,7 +70,7 @@ body {
 
 .item figure {
   width: 100%;
-  height: 200px; /* Altura */
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
