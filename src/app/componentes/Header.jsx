@@ -32,8 +32,6 @@ const Header = ({ allProducts, setAllProducts, total, setTotal, countProducts, s
           🛒 <span className="cart-count">{countProducts}</span>
           </div>
         )}
-
-      {/* MENÚ DESPLEGABLE DEL CARRITO */}
       <div className={`cart-dropdown ${active ? "active" : ""}`}>
         <h2>Carrito de Compras</h2>
 
@@ -51,8 +49,6 @@ const Header = ({ allProducts, setAllProducts, total, setTotal, countProducts, s
                 <button className="delete-btn" onClick={() => onDeleteProduct(product)}>🗑</button>
               </div>
             ))}
-
-            {/* Botones de Vaciar Carrito y Generar Factura */}
             <div className="cart-footer">
               <button className="clean-cart" onClick={onCleanCart}>Vaciar Carrito</button>
               <button className="invoice-btn" onClick={() => setShowInvoice(true)}>Generar Factura</button>
@@ -60,8 +56,6 @@ const Header = ({ allProducts, setAllProducts, total, setTotal, countProducts, s
           </>
         )}
       </div>
-
-      {/* MODAL DE FACTURA */}
       {showInvoice && (
         <div className="modal">
           <div className="modal-content">

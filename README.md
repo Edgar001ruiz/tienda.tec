@@ -1,3 +1,10 @@
+#Tienda de Tecnología Ruiz
+##Integrante: 
+- Edgar Antonio Ruiz Hernández
+
+#Enlace del video:( https://www.youtube.com/watch?v=ppw15sD2I80 )
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
